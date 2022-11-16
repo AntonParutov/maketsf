@@ -1,0 +1,48 @@
+@media (max-width: 729px) {
+  nav,
+  .button.button_header_footer,
+  .footer,
+  .projects,
+  .vector_elements,
+  .flex_info_types_of_repair,
+  .help_save_logo,
+  .ul_interior_design,
+  .img_second_flex_block_interior_design_dwn,
+  .third_flex_block_interior_design {
+    display: none;
+  }
+  .wrapper {
+    margin: 0 18px;
+  }
+  .title {
+    font-size: 23px;
+    line-height: 132.83%;
+  }
+  .hero {
+    height: auto;
+  }
+  .hero_wrapper {
+    padding-top: 85px;
+    padding-bottom: 61px;
+  }
+  .hero_text {
+    font-size: 14px;
+    line-height: 135.84%;
+  }
+  .button {
+    display: block;
+    margin: 32px auto 0 auto;
+    max-width: 340px;
+    width: 100%;
+  }
+  .button_submit {
+    margin-top: 26px;
+  }
+  .subtitle {
+    display: block;
+  }
+  .projects_all {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
