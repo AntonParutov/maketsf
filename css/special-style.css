@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  body {
+    margin: 0;
+    max-width: 100%;
+  }
   nav,
   .button.button_header_footer,
   .footer,
@@ -45,17 +49,17 @@
     line-height: 138.6%;
     letter-spacing: -0.07em;
   }
-  .projects_all {
-    justify-content: center;
+  .projects_all_grid {
     grid-template-areas:
+      "h2"
+      "p"
       "slider"
-      "list";
+      "charact";
     display: grid;
     margin: 0 auto;
   }
   .completed_projects_text {
     margin-top: 36px;
-    grid-area: list;
   }
   .completed_projects_text_text {
     font-size: 11px;
@@ -64,13 +68,13 @@
     display: block;
   }
   .projects__image {
-    grid-area: slider;
     background-image: url(../images/projects2.png);
     width: 100%;
     padding-top: 71%;
     background-size: cover;
+    margin-top: 65px;
   }
-  .projects_image_image  {
+  .projects_image_image {
     display: none;
   }
   .completed_projects {

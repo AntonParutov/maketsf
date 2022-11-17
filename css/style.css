@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Nunito Sans", sans-serif;
-  src: url(/fonts/NunitoSans-Regular.ttf);
+  src: url(../fonts/NunitoSans-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito Sans", sans-serif;
-  src: url(/fonts/NunitoSans-Italic.ttf);
+  src: url(../fonts/NunitoSans-Italic.ttf);
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: "Yeseva One";
-  src: url(/fonts/YesevaOne-Regular.ttf);
+  src: url(../fonts/YesevaOne-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
@@ -92,7 +92,7 @@ body * {
   color: white;
 }
 .hero {
-  background-image: url(/images/hero.jpg);
+  background-image: url(../images/hero.jpg);
   background-size: cover;
   height: 707px;
   position: relative;
@@ -158,7 +158,6 @@ body * {
 .projects_image_image {
   width: 679px;
   height: 482px;
-  margin-top: 53px;
 }
 .subtitle {
   font-family: "Yeseva One";
@@ -171,7 +170,7 @@ body * {
   margin-top: 0;
 }
 .completed_projects_text {
-  margin-top: 53px;
+  grid-area: h2;
 }
 .completed_projects_text_text {
   font-size: 14px;
@@ -194,10 +193,22 @@ body * {
 .completed_projects_text_characteristics {
   display: flex;
   flex-wrap: wrap;
+  grid-area: charact;
 }
-.projects_all {
-  display: flex;
-  justify-content: space-between;
+.paragrapf_project {
+  grid-area: p;
+}
+.projects_all_grid {
+  display: grid;
+  grid-template-areas: 
+  "h2 slider"
+  "p slider"
+  "charact slider"
+  "vector slider";
+  margin-top: 52px;
+}
+.projects__image {
+  grid-area: slider;
 }
 .characteristics {
   flex: 0 1 40%;
@@ -208,6 +219,7 @@ body * {
   width: 206px;
   height: 14px;
   justify-content: space-between;
+  grid-area: vector;
 }
 .img_cam {
   display: block;
@@ -226,7 +238,7 @@ body * {
   z-index: 1;
   width: 817px;
   height: 434px;
-  background-image: url(/images/video.jpg);
+  background-image: url(../images/video.jpg);
   background-size: cover;
 }
 .video_overlay {
@@ -409,7 +421,7 @@ body * {
 .frst_block_flex_info_types_of_repair {
   height: 509px;
   width: 600px;
-  background-image: url(/images/back_1st_block_repair.jpg);
+  background-image: url(../images/back_1st_block_repair.jpg);
   background-size: cover;
 }
 .ul_backgrnd_frst_block_flex_info_types_of_repair {
@@ -551,7 +563,7 @@ body * {
   text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
 .interior_design {
-  background-image: url(/images/interior_design_background.png);
+  background-image: url(../images/interior_design_background.png);
   background-size: cover;
   height: 864px;
   position: relative;
@@ -642,13 +654,13 @@ body * {
   bottom: 0;
 }
 .flex_left_back_our_clients {
-  background-image: url(/images/back_left_our_clients.png);
+  background-image: url(../images/back_left_our_clients.png);
   opacity: 0.05;
   width: 100%;
   background-size: contain;
 }
 .flex_right_back_our_clients {
-  background-image: url(/images/back_right_our_clients.png);
+  background-image: url(../images/back_right_our_clients.png);
   opacity: 0.05;
   width: 100%;
   background-size: contain;
@@ -733,7 +745,7 @@ body * {
   margin-top: 24px;
 }
 .adress {
-  background-image: url(/images/adress_back.jpg);
+  background-image: url(../images/adress_back.jpg);
   background-size: cover;
   position: relative;
 }
