@@ -65,7 +65,7 @@
   }
   .projects__image {
     grid-area: slider;
-    background-image: url(/maketsf/images/projects2.png);
+    background-image: url(../images/projects2.png);
     width: 100%;
     padding-top: 71%;
     background-size: cover;
