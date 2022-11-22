@@ -12,11 +12,15 @@
   .help_save_logo,
   .ul_interior_design,
   .img_second_flex_block_interior_design_dwn,
-  .third_flex_block_interior_design {
+  .third_flex_block_interior_design,
+  .img_second_flex_block_interior_design_up,
+  .hero-overlay_design,
+  .our_clients {
     display: none;
   }
   .wrapper {
     margin: 0 18px;
+    max-width: 100%;
   }
   .title {
     font-size: 23px;
@@ -79,5 +83,228 @@
   }
   .completed_projects {
     height: auto;
+  }
+  .video {
+    margin: 0;
+    width: 100%;
+    height: 0;
+    padding-top: 53%;
+  }
+  .img_cam {
+    margin-top: 0;
+  }
+  .cam {
+    margin-top: 58px;
+    padding-bottom: 40px;
+  }
+  .online_control {
+    background-color: black;
+    height: auto;
+  }
+  .video_btn {
+    margin-top: 24%;
+    display: flex;
+    justify-content: center;
+  }
+  .video_btn_img {
+    padding-top: 0;
+    width: 37px;
+    height: 37px;
+  }
+  .line_hr {
+    margin-top: 28px;
+  }
+  .about_cam {
+    font-size: 11px;
+    line-height: 169.8%;
+    color: #ffffff;
+    margin-top: 21px;
+    margin-bottom: 61px;
+  }
+  .br_cam {
+    display: none;
+  }
+  .form_flex {
+    display: grid;
+    justify-content: stretch;
+    grid-template-areas:
+      "name"
+      "tel"
+      "checkbox"
+      "submit";
+  }
+  .label_item {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .first_form {
+    margin-top: 61px;
+  }
+  .window_name,
+  .window_tel {
+    width: 100%;
+  }
+  .window_tel {
+    margin-top: 63px;
+  }
+  .input_window {
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .input_window::placeholder {
+    font-size: 14px;
+    line-height: 138.72%;
+    color: #ffffff;
+  }
+  .first-checkbox {
+    justify-self: baseline;
+    margin-top: 28px;
+  }
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 163.68%;
+    color: #ffffff;
+  }
+  .check_box_submit {
+    width: 100%;
+  }
+  .types_of_repair {
+    height: auto;
+    margin-top: -54px;
+    background-color: white;
+  }
+  .sub_subtitle_types_of_repair {
+    font-size: 22px;
+    line-height: 138.6%;
+    padding-top: 83px;
+  }
+  .flex_types_of_repair {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 79px;
+  }
+  .variants_of_repair {
+    min-width: 284px;
+  }
+  .img_types_of_repair {
+    width: 100%;
+    height: auto;
+  }
+  .list_types_of_repair {
+    width: 80%;
+    height: auto;
+    margin-left: 0;
+    margin-top: -170px;
+  }
+  .li_list_types_of_repair {
+    line-height: 169.8%;
+  }
+  .ul_types_of_repair {
+    padding-bottom: 37px;
+  }
+  .list_header_types_of_repair {
+    display: block;
+    padding-top: 21px;
+  }
+  .price_types_of_repair {
+    padding-top: 2%;
+    position: absolute;
+    margin-top: -42px;
+  }
+  .interior_design {
+    background-image: none;
+    height: auto;
+    position: relative;
+  }
+  .wrapper.interior_design_wrapper {
+    flex-direction: column;
+    margin-top: 75px;
+  }
+  .subtitle.subtitle_design_interior {
+    display: block;
+  }
+  .img_second_flex_block_interior_design_up {
+  }
+  .first_flex_block_interior_design {
+    margin: 0 auto;
+  }
+  .second_flex_block_interior_design {
+    margin-top: 24px;
+    background-image: url(../images/interior_design_background.png);
+    padding-top: 60%;
+    background-size: cover;
+    margin-right: initial;
+  }
+  .adress {
+    background-image: none;
+    background-color: black;
+    position: relative;
+  }
+  .adress_wrapper {
+    grid-template-areas:
+      "form_questions"
+      "map_adress"
+      "logos_adress";
+    height: auto;
+    margin-top: -157px;
+  }
+  .form_questions {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    position: unset;
+    margin-top: 220px;
+    background-color: black;
+  }
+  .head_form_questions {
+    padding: 0;
+  }
+  .flex_adress_form {
+    flex-direction: column;
+  }
+  .window_tel_third {
+    padding-left: 0;
+  }
+  .window_email_second.window_email_third {
+    margin-top: 63px;
+    justify-content: start;
+  }
+  .input_window_second.input_window_third {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .hero-overlay_adress {
+    background: none;
+    background-color: black;
+  }
+  .input_window_second.input_window_question {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .label_item.label_item_second {
+    width: 100%;
+  }
+  .first-checkbox {
+    text-align: left;
+  }
+  .input_window.input_window_second {
+    background-color: black;
+  }
+  .button_form_third_div {
+    margin-top: 67px;
+    margin-bottom: 45px;
+  }
+  .logos_adress {
+    margin-bottom: 49px;
+  }
+  .sub_subtitle_adress {
+    padding: 0;
+    margin-top: 45px;
   }
 }

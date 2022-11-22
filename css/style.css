@@ -194,17 +194,18 @@ body * {
   display: flex;
   flex-wrap: wrap;
   grid-area: charact;
+  margin-top: 36px;
 }
 .paragrapf_project {
   grid-area: p;
 }
 .projects_all_grid {
   display: grid;
-  grid-template-areas: 
-  "h2 slider"
-  "p slider"
-  "charact slider"
-  "vector slider";
+  grid-template-areas:
+    "h2 slider"
+    "p slider"
+    "charact slider"
+    "vector slider";
   margin-top: 52px;
 }
 .projects__image {
@@ -293,16 +294,28 @@ body * {
   color: #363636;
 }
 .form_flex {
-  display: flex;
+  display: grid;
+  grid-template-areas:
+    "name tel submit"
+    "checkbox checkbox checkbox";
   justify-content: space-between;
-  align-items: flex-end;
+}
+.window_name {
+  grid-area: name;
+}
+.window_tel {
+  grid-area: tel;
+}
+.check_box_submit {
+  grid-area: submit;
+}
+.first-checkbox {
+  grid-area: checkbox;
+  text-align: center;
+  margin-top: 39px;
 }
 .first_form {
   margin-top: 91px;
-}
-.first-checkbox {
-  text-align: center;
-  margin-top: 39px;
 }
 .label {
   cursor: pointer;
@@ -486,6 +499,10 @@ body * {
 }
 .form_flex.form_second_grid {
   display: grid;
+  grid-template-areas:
+    "name" 
+    "tel"
+    "checkbox";
   height: 270px;
   justify-content: center;
 }
@@ -750,6 +767,11 @@ body * {
   position: relative;
 }
 .adress_wrapper {
+  display: grid;
+  grid-template-areas:
+    "form_questions"
+    "logos_adress"
+    "map_adress";
   height: 954px;
   position: relative;
   z-index: 1;
@@ -783,6 +805,7 @@ body * {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  grid-area: form_questions;
 }
 .flex_adress_form {
   display: flex;
@@ -825,12 +848,12 @@ body * {
   color: #e3b873;
   position: relative;
   margin-top: 0;
-  padding-top: 271px;
+  padding-top: 238px;
 }
 .map_adress {
   display: flex;
   justify-content: center;
-  margin-top: 43px;
+  grid-area: map_adress;
 }
 .map_adress_iframe {
   width: 100%;
@@ -841,6 +864,7 @@ body * {
 }
 .logos_adress {
   text-align: center;
+  grid-area: logos_adress;
 }
 .logo_adress_insta {
   margin-left: 15px;
