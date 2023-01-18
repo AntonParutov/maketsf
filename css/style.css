@@ -209,6 +209,8 @@ body * {
 }
 .projects__image {
   grid-area: slider;
+  width: 679px;
+  height: 482px;
 }
 .characteristics {
   flex: 0 1 40%;
@@ -220,6 +222,10 @@ body * {
   height: 14px;
   justify-content: space-between;
   grid-area: vector;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
 }
 .img_cam {
   display: block;
