@@ -1,64 +1,51 @@
-const slider = document.querySelector("#slider");
-const sliderItems = Array.from(slider.children);
-const btnNext = document.querySelector("#btnNext");
-const btnPrev = document.querySelector("#btnPrev");
+// Массив картинок с ключ\значениями
+const imagesWithParam = [
+  {
+    url: "./slider_images/image1.png",
+    linkCity: "ROSTOV-ON-DON, ADMIRAL",
+    city: "Rostov-on-Don<br> LCD admiral",
+    apartArea: "81 m2",
+    repTime: "3.5 months",
+    repCost: "Upon request",
+  },
+  {
+    url: "./slider_images/image2.png",
+    linkCity: "SOCHI THIEVES",
+    city: "Sochi<br> Thieves",
+    apartArea: "105 m2",
+    repTime: "4 months",
+    repCost: "Upon request",
+  },
+  {
+    url: "./slider_images/image3.png",
+    linkCity: "ROSTOV-ON-DON, PATRIOTIC",
+    city: "Rostov-on-Don<br> Patriotic",
+    apartArea: "93 m2",
+    repTime: "3 months",
+    repCost: "Upon request",
+  },
+];
 
-sliderItems.forEach(function (slide, index) {
-  if (index !== 0) slide.classList.add("hidden");
+// Функция работы слайдера
+function sliderEngine(imagesWithParam) {
+  if (!imagesWithParam || !imagesWithParam.length) return;
 
-  // добавляем индексы
-  slide.dataset.index = index;
+  // const sliderWrapper = document.querySelector(".completed_projects");
+  const sliderImages = document.querySelector(".projects__image");
+  const sliderArrows = document.querySelector(".vector_elements");
 
-  // добавляем data атрибут active для первого/активного слайда
-  sliderItems[0].setAttribute("data-active", "");
+  initImages();
+  function initImages() {
+    imagesWithParam.forEach((image, index) => {
+      let imageElement = document.createElement("div");
+      imageElement.className = `image n${index} ${index ? "" : "active"}`;
+      imageElement.dataset.index = index;
+      imageElement.style.backgroundImage = `url(${image.url})`;
+      sliderImages.appendChild(imageElement);
+    });
+  }
+}
 
-  // клик по слайду
-  slide.addEventListener("click", function () {
-    // скрываем текущий слайд
-    slide.classList.add("hidden");
-    slide.removeAttribute("data-active");
-
-    // рассчитываем индекс след слайда
-    let nextSlideIndex = index + 1 === sliderItems.length ? 0 : index + 1;
-
-    // находим след слайд
-    const nextSlide = slider.querySelector(`[data-index='${nextSlideIndex}']`);
-
-    // отображаем след слайд
-    nextSlide.classList.remove("hidden");
-    nextSlide.setAttribute("data-active", "");
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  sliderEngine(imagesWithParam);
 });
-
-btnNext.onclick = function () {
-  // скрываем текущий слайд
-  const currentSlide = slider.querySelector("[data-active]");
-  const currentSlideIndex = +currentSlide.dataset.index;
-
-  currentSlide.classList.add("hidden");
-  currentSlide.removeAttribute("data-active");
-
-  // показываем след слайд
-  let nextSlideIndex = currentSlideIndex + 1 === sliderItems.length ? 0 : currentSlideIndex + 1;
-  const nextSlide = slider.querySelector(`[data-index='${nextSlideIndex}']`);
-
-  nextSlide.classList.remove('hidden');
-  nextSlide.setAttribute('data-active', '');
-};
-
-btnPrev.onclick = function () {
-  // скрываем текущий слайд
-  const currentSlide = slider.querySelector("[data-active]");
-  const currentSlideIndex = +currentSlide.dataset.index;
-
-  currentSlide.classList.add("hidden");
-  currentSlide.removeAttribute("data-active");
-
-  // показываем пред слайд
-  let nextSlideIndex =
-    currentSlideIndex === 0 ? sliderItems.length - 1 : currentSlideIndex - 1;
-  const nextSlide = slider.querySelector(`[data-index='${nextSlideIndex}']`);
-
-  nextSlide.classList.remove("hidden");
-  nextSlide.setAttribute("data-active", "");
-};

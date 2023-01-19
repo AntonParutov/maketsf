@@ -207,10 +207,17 @@ body * {
     "vector slider";
   margin-top: 52px;
 }
-.projects__image {
+.projects__image .image{
   grid-area: slider;
   width: 679px;
   height: 482px;
+  opacity: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: opacity 1000ms ease;
+}
+.projects__image .image.active {
+  opacity: 1;
 }
 .characteristics {
   flex: 0 1 40%;
@@ -226,6 +233,33 @@ body * {
 }
 .hidden {
   display: none;
+}
+.slider_dot {
+  display: inline-block;
+  margin: 0 10px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid grey;
+  background-color: grey;
+  border-radius: 50%;
+  outline: none;
+}
+
+.slider_dot_active {
+  border: 2px solid white;
+  background-color: white;
+}
+.slider_dot:hover,
+.slider_dot:focus {
+  border-color: white;
+  background-color: black;
+  transition: all ease 0.7s;
+}
+
+.slider_dot_active:hover,
+.slider_dot_active:focus {
+  transition: all ease 0.5s;
+  background-color: white;
 }
 .img_cam {
   display: block;
