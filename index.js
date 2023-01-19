@@ -30,11 +30,13 @@ const imagesWithParam = [
 function sliderEngine(imagesWithParam) {
   if (!imagesWithParam || !imagesWithParam.length) return;
 
-  // const sliderWrapper = document.querySelector(".completed_projects");
-  const sliderImages = document.querySelector(".projects__image");
+  const sliderWrapper = document.querySelector(".slider_wrapper");
+  const sliderImages = sliderWrapper.querySelector(".projects__image");
   const sliderArrows = document.querySelector(".vector_elements");
 
   initImages();
+  initArrows();
+
   function initImages() {
     imagesWithParam.forEach((image, index) => {
       let imageElement = document.createElement("div");
@@ -43,6 +45,27 @@ function sliderEngine(imagesWithParam) {
       imageElement.style.backgroundImage = `url(${image.url})`;
       sliderImages.appendChild(imageElement);
     });
+  }
+
+  function initArrows() {
+    let lastIndex = imagesWithParam.length - 1;
+    sliderArrows.querySelectorAll(".vector_elements_arrow").forEach((arrow) => {
+      arrow.addEventListener("click", function () {
+        let curNumber = +sliderImages.querySelector("active").dataset.index;
+        let nextNumber;
+        if (arrow.classList.containes("left")) {
+          nextNumber = curNumber === 0 ? lastIndex : curNumber - 1;
+        } else {
+          nextNumber = curNumber === lastIndex ? 0 : curNumber + 1;
+        }
+        moveSlider(nextNumber);
+      });
+    });
+  }
+
+  function moveSlider(num){
+    sliderImages.querySelector('.active').classList.remove('active');
+    sliderImages.querySelector(`n${num}`).classList.add('active');
   }
 }
 

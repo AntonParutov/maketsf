@@ -207,14 +207,26 @@ body * {
     "vector slider";
   margin-top: 52px;
 }
-.projects__image .image{
+.slider_wrapper {
+  position: relative;
+   
   grid-area: slider;
+}
+.projects__image {
+  position: relative;
   width: 679px;
   height: 482px;
-  opacity: 0;
+}
+.projects__image .image{
   background-size: cover;
   background-position: center center;
-  transition: opacity 1000ms ease;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 800ms ease;
 }
 .projects__image .image.active {
   opacity: 1;
