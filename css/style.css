@@ -138,7 +138,7 @@ body * {
   margin: 0 0 0 492px;
   padding-top: 107px;
 }
-.projects_item  a{
+.projects_item a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.3);
   font-family: "Yeseva One";
@@ -149,7 +149,7 @@ body * {
 .projects_item {
   margin-right: 60px;
 }
-.projects_item.active  a{
+.projects_item.active a {
   color: #e3b873;
   border-bottom: 1px solid #e3b873;
   padding-bottom: 6.7px;
@@ -185,7 +185,7 @@ body * {
   color: #e3b873;
 }
 .projects_span {
-display: none;
+  display: none;
   font-size: 13px;
   line-height: 21px;
   color: #ffffff;
@@ -216,7 +216,7 @@ display: none;
 }
 .slider_wrapper {
   position: relative;
-   
+
   grid-area: slider;
 }
 .projects__image {
@@ -224,7 +224,7 @@ display: none;
   width: 679px;
   height: 482px;
 }
-.projects__image .image{
+.projects__image .image {
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -240,6 +240,7 @@ display: none;
 }
 .characteristics {
   flex: 0 1 40%;
+  width: 212px;
 }
 .vector_elements {
   padding-top: 40px;
@@ -558,7 +559,7 @@ display: none;
 .form_flex.form_second_grid {
   display: grid;
   grid-template-areas:
-    "name" 
+    "name"
     "tel"
     "checkbox";
   height: 270px;
