@@ -146,9 +146,9 @@ body * {
   line-height: 19px;
   text-transform: uppercase;
 }
-/* .projects_item {
+.projects_item {
   margin-right: 60px;
-} */
+}
 .projects_item.active  a{
   color: #e3b873;
   border-bottom: 1px solid #e3b873;
@@ -185,6 +185,13 @@ body * {
   color: #e3b873;
 }
 .projects_span {
+display: none;
+  font-size: 13px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.projects_span.active {
+  display: block;
   font-size: 13px;
   line-height: 21px;
   color: #ffffff;

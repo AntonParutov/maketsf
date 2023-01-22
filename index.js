@@ -34,8 +34,12 @@ function sliderEngine(imagesWithParam, options) {
   const sliderWrapper = document.querySelector(".slider_wrapper");
   const sliderImages = sliderWrapper.querySelector(".projects__image");
   const sliderArrows = document.querySelector(".vector_elements");
-  const cityLinks = document.querySelector(".projects");
-  let dotsWrapper = document.querySelector(".vector_elements_center");
+  const cityLinks = document.querySelector(".projects_list");
+  const dotsWrapper = document.querySelector(".vector_elements_center");
+  const cityBlock = document.querySelector(".city_block");
+  const apartArea = document.querySelector(".apart_area");
+  const repair = document.querySelector(".repair_time");
+  const repCost = document.querySelector(".repair_cost");
 
   initImages();
   initArrows();
@@ -47,18 +51,41 @@ function sliderEngine(imagesWithParam, options) {
 
   function initImages() {
     imagesWithParam.forEach((image, index) => {
-      let imageElement = `<div class="image n${index} ${index ? "" : "active"}" style="background-image: url(${image.url})" data-index="${index}"></div>`;
+
+      let imageElement = `<div class="image n${index} ${
+        index ? "" : "active"
+      }" style="background-image: url(${
+        image.url
+      })" data-index="${index}"></div>`;
       sliderImages.innerHTML += imageElement;
 
       let cityLink = `<li class="projects_item n${index} ${
         index ? "" : "active"
-      }" data-index="${index}"><a href="">${imagesWithParam[index].linkCity}</a></li>`;
+      }" data-index="${index}"><a href="javascript:;">${
+        imagesWithParam[index].linkCity
+      }</a></li>`;
       cityLinks.innerHTML += cityLink;
-      // let imageElement = document.createElement("div");
-      // imageElement.className = `image n${index} ${index ? "" : "active"}`;
-      // imageElement.dataset.index = index;
-      // imageElement.style.backgroundImage = `url(${image.url})`;
-      // sliderImages.appendChild(imageElement);
+
+      let cityProject = `<span class="projects_span n${index} ${
+        index ? "" : "active"
+      }" data-index="${index}">${imagesWithParam[index].city}</span>`;
+      cityBlock.innerHTML += cityProject;
+
+      let apartment = `<span class="projects_span n${index} ${
+        index ? "" : "active"
+      }" data-index="${index}">${imagesWithParam[index].apartArea}</span>`;
+      apartArea.innerHTML += apartment;
+
+      let repairTime = `<span class="projects_span n${index} ${
+        index ? "" : "active"
+      }" data-index="${index}">${imagesWithParam[index].repTime}</span>`;
+      repair.innerHTML += repairTime;
+
+      let repairCost = `<span class="projects_span n${index} ${
+        index ? "" : "active"
+      }" data-index="${index}">${imagesWithParam[index].repCost}</span>`;
+      repCost.innerHTML += repairCost;
+
     });
   }
 
@@ -91,6 +118,24 @@ function sliderEngine(imagesWithParam, options) {
   function moveSlider(num) {
     sliderImages.querySelector(".active").classList.remove("active");
     sliderImages.querySelector(`.n${num}`).classList.add("active");
+
+    dotsWrapper.querySelector(".active").classList.remove("active");
+    dotsWrapper.querySelector(`.n${num}`).classList.add("active");
+
+    cityLinks.querySelector(".active").classList.remove("active");
+    cityLinks.querySelector(`.n${num}`).classList.add("active");
+
+    cityBlock.querySelector(".active").classList.remove("active");
+    cityBlock.querySelector(`.n${num}`).classList.add("active");
+
+    apartArea.querySelector(".active").classList.remove("active");
+    apartArea.querySelector(`.n${num}`).classList.add("active");
+
+    repair.querySelector(".active").classList.remove("active");
+    repair.querySelector(`.n${num}`).classList.add("active");
+
+    repCost.querySelector(".active").classList.remove("active");
+    repCost.querySelector(`.n${num}`).classList.add("active");
   }
 
   function initDots() {
@@ -102,6 +147,7 @@ function sliderEngine(imagesWithParam, options) {
         moveSlider(this.dataset.index);
         dotsWrapper.querySelector(".active").classList.remove("active");
         this.classList.add("active");
+        
       });
       dotsWrapper.appendChild(dot);
     });
