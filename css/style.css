@@ -257,7 +257,7 @@ body * {
   outline: none;
 }
 
-.slider_dot_active {
+.slider_dot .active {
   border: 2px solid white;
   background-color: white;
 }
@@ -268,8 +268,8 @@ body * {
   transition: all ease 0.7s;
 }
 
-.slider_dot_active:hover,
-.slider_dot_active:focus {
+.slider_dot .active:hover,
+.slider_dot .active:focus {
   transition: all ease 0.5s;
   background-color: white;
 }
